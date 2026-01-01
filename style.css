@@ -1,0 +1,92 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(137, 207, 240);
+}
+.inputform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 4vh;
+    flex-direction: column;
+}
+.container{
+    display: grid;
+    width: 24vw;
+    height: 24vw;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+}
+.faceborder{
+    grid-row: 2/-2;
+    grid-column: 2/-2;
+    background-color: white;
+    border-radius: 50%;
+}
+.face{
+    grid-column: 3/-3;
+    grid-row: 3/-3;
+    background-color: rgb(239, 239, 101);
+    border-radius: 50%;
+    border: 0.6vw solid black;
+
+}
+.lefteye{
+    grid-column: 8/10;
+    grid-row: 8/10;
+    background-color: white;
+    border-radius: 50%;
+    background-color: black;
+}
+.righteye{
+    grid-row: 8/10;
+    grid-column: -10/-8;
+    border-radius: 50%;
+    background-color: black;
+
+}
+.mouth{
+    grid-column: 10/-10;
+    grid-row: -9/-6;
+    border: 0.6vw solid black;
+    border-radius: 0 0 3vw 3vw;
+    border-top: none;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max(5vw, 80px);
+    height: auto;
+    font-size: clamp(8px, 1.16rem, 24px);
+    background-color: red;
+    color: white;
+    border-radius: 1.25vw;
+    border: none;
+    scale: 1;
+}
+.btn:hover{
+    border: 5px solid rgb(97, 159, 179);
+    scale: 1.2;
+}
+@media screen and (max-width: 500px){
+    .container{
+        width: 40vw;
+        height: 40vw;
+    }
+    .mouth{
+        border-radius: 0 0 5vw 5vw;
+    }
+}
+@media screen and (min-width: 501px) and (max-width: 800px){
+    .container{
+        width: 28vw;
+        height: 28vw;
+    }
+    .mouth{
+        border-radius: 0 0 3.5vw 3.5vw;
+    }
+}
